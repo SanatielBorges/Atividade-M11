@@ -1,0 +1,331 @@
+/* CONFIG GERAILS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FIM CONFIG GERAIS */
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(15, 61, 131);
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.topo h1 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.topo nav ul {
+    display: flex;
+}
+
+.topo nav li {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.topo nav li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.menu-drop {
+    cursor: pointer;
+}
+
+header span {
+    display: none;
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+
+/* FIM HEADER */
+
+/* BREAKPOINTS HEADER */
+
+@media screen and (max-width: 339px) {
+    .topo h1 {
+        font-size: 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header span {
+        display: block;
+    }
+}
+
+/* FIM BREAKPOINTS HEADER */
+
+/* CONFIG CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.the-magazine {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+}
+
+.img-magazine {
+    width: 50%;
+}
+
+.the-magazine img {
+    width: 100%;
+}
+
+.the-magazine-desc h3 {
+    color: rgb(15, 61, 131);
+    margin-bottom: 10px;
+}
+
+.the-magazine-desc span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(15, 61, 131);
+    margin-bottom: 20px;
+}
+
+.the-magazine-desc {
+    width: 50%;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+/* FIM CONFIG CONTAINER */
+
+/* BREAKPOINTS THE-MAGAZINE */
+
+@media screen and (max-width: 640px) {
+    .the-magazine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-magazine,
+    .the-magazine-desc {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .the-magazine img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .the-magazine-desc {
+        margin: auto;
+    }
+}
+
+/* FIM BREAKPOINTS THE-MAGAZINE */
+
+/* SECTION PRODUTOS */
+
+.produtos {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.produto {
+    margin-bottom: 25px;
+}
+
+.produtos-desc {
+    color: rgb(15, 61, 131);
+    margin-bottom: 10px;
+}
+
+.produtos-desc span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(15, 61, 131);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.produto img {
+    max-width: 100%;
+    width: 285px;
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+.produto p {
+    font-size: 12px;
+    text-align: justify;
+    margin: 20px 0px;
+}
+
+button {
+    background-color: rgb(15, 61, 131);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(47, 113, 212);
+    transition: all ease 0.8s;
+    
+}
+
+
+/* FIM SECTION PRODUTOS */
+
+/* BREAKPOINTES PRODUTOS */
+
+/* DISPOSITIVOS MOBILES */
+@media screen and (max-width: 640px) {
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produtos-desc {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .produto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .produto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .produto h4 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .produto p {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    button {
+        cursor: pointer;
+        max-width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+}
+
+/* DISPOSITIVOS MOBILES */
+
+/* TABLETS E IPADS */
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produtos-desc {
+        width: 100%;
+    }
+
+    .produto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .produto img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .produto h4 {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .produto p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    button {
+        cursor: pointer;
+        max-width: 50%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+}
+/* TABLETS E IPADS */
+
+/* FIM BREAKPOINTS PRODUTOS */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(15, 61, 131);
+    padding: 20px 0px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
